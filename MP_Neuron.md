@@ -1,0 +1,18 @@
+# MP Neuron
+
+## Overview
+
+| Feature                   | MP Neuron                                                    | Hebbian Neuron                                               | Kohonen Neuron (and SOM)                                     |
+| :------------------------ | :----------------------------------------------------------- | :----------------------------------------------------------- | :----------------------------------------------------------- |
+| **Learning Rule**         | No learning (fixed weights)                                  | Unsupervised Learning (based on the input data)              | Unsupervised Learning (competitive, winner-takes-all approach) |
+| **Weight Update**         | Weights are predetermined and fixed                          | **Hebb's Rule:** $\Delta w_i = Cx_iy$<br> **Oja's Rule:** $\Delta w_i = C(x_iy - y^2w_i)$ <br> where $C$ is the learning rate, $x_i$ is the input, $y$ is the output, and $w_i$ is the current weight | $\Delta w_{ji} = C(a_i^t - w_{ji}^t)$ where $C$ is the learning rate, $a_i^t$ is the input, and $w_{ji}^t$ is the weight of the winning neuron |
+| **Weight Normalisation**  | Not applicable                                               | **Hebb's Rule:** No <br> **Oja's Rule:** Yes                 | Yes (implicitly during the update of the winning neuron's weight vector) |
+| **Activation Function**   | Threshold-based (binary)                                     | Continuous (e.g., linear, sigmoid)                           | Continuous (e.g., linear, sigmoid)                           |
+| **Output Function**       | Binary (0 or 1) based on whether the weighted sum exceeds the threshold | Continuous, depending on the activation function             | Continuous, depending on the activation function. In SOM, this can be the weighted sum or Euclidean distance. |
+| **Biological Motivation** | "All-or-nothing" firing of neurons                           | "Cells that fire together, wire together"                    | Competitive learning in the brain                            |
+| **Convergence**           | Not applicable (no learning)                                 | **Hebb's Rule:** May not converge <br> **Oja's Rule:** Converges to the principal eigenvector of the input covariance matrix | Converges to a state where the winning neuron's weight vector is closest to the input vector. |
+| **Use Cases**             | Simple logic functions                                       | **Hebb's Rule:** Primarily a conceptual foundation <br> **Oja's Rule:** PCA, feature extraction, unsupervised neural networks | Feature mapping, dimensionality reduction, clustering        |
+| **Weight Values**         | Limited to -1, 0, or 1                                       | Arbitrary real numbers                                       | Arbitrary real numbers                                       |
+| **Input Type**            | Binary (0 or 1)                                              | Continuous (real numbers)                                    | Continuous (real numbers)                                    |
+| **Input Processing**      | Multiplied by fixed weights (-1, 0, or 1)                    | Multiplied by learnable weights                              | Multiplied by learnable weights; In SOM, input vector compared to neuron's weight vector (Euclidean distance or weighted sum) |
+| **Input Representation**  | Represents the presence or absence of a feature              | Represents the strength or magnitude of a feature            | Represents the strength or magnitude of a feature; In SOM, input vector represents a data point in multi-dimensional space |
