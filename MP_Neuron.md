@@ -59,4 +59,5 @@
 ### Self-Organising Map
 
 - Core concept: not only update the winner, but also update its neighbours.
-- $\Delta w_{ji}^t = C(a_i^t - w_{ji}^t)\theta(j,j^*)$, where $j^*$ is the index of the winner, and $\theta(j,j^*)$ is a restraint function due to the distance between $j$ and $j^*$.
+- $\Delta w_{ji}^t = C(a_i^t - w_{ji}^t)\theta(j,j^\ast)$, where $j^\ast$ is the index of the winner, and $\theta(j,j^\ast)$ is a restraint function due to the distance between $j$ and $j^\ast$.
+
