@@ -45,7 +45,7 @@
 - $w_i^{\text{norm}} = \frac{w_i}{\lVert w \rVert}$, where $\lVert w \rVert = \sqrt{w_1^2 + w_2^2 + \ldots + w_n^2}$
 - Then check convergence criteria: $\max_{i} \limits |w_i^t - w_i^{t-1}| \leq \delta$
 
-### Weight convergence
+### Weight Convergence
 
 - Convergence is achieved when the weight vector converges to the eigenvector corresponding to the largest eigenvalue of the input’s covariance matrix.
 
