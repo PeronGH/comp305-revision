@@ -100,17 +100,9 @@
 
 ### Computation
 
-- Probability of destroying a schema $H$ due to crossover:
+- Probability of destroying a schema $H$ due to crossover: $p_c^d(H) = p_c \frac{\delta(H)}{l - 1}$
 
-  ```math
-  p_c^d(H) = p_c \frac{\delta(H)}{l - 1}
-  ```
-
-- Probability of destroying a schema $H$ due to mutation:
-
-  ```math
-  p_m^d(H) = O(H) \frac{p_m}{l}
-  ```
+- Probability of destroying a schema $H$ due to mutation: $p_m^d(H) = O(H) \frac{p_m}{l}$
 
 Where:
 
