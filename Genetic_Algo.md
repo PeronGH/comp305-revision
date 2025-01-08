@@ -95,7 +95,7 @@
     *   Composed of fixed values and wildcards (\*)
 
 *   **Order of a Schema:** The number of fixed positions (non-wildcards) in the schema.
-*   **Defining Length of a Schema:** The distance between the first and last fixed positions.
+*   **Defining Length of a Schema:** The distance between the first and last fixed positions (difference of their indices).
 *   **Schema Theorm:** Highly-fit, short-defining-length and low-order schemas increase exponentially in frequency in successive generations. 
 
 ### Computation
