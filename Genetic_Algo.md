@@ -102,7 +102,11 @@
 
 - Probability of destroying a schema $H$ due to crossover: $p_c^d(H) = p_c \frac{\delta(H)}{l - 1}$
 
-- Probability of destroying a schema $H$ due to mutation: $p_m^d(H) = O(H) \frac{p_m}{l}$
+- Probability of destroying a schema $H$ due to mutation: $p_m^d(H) = p_m \frac{O(H)}{l}$
+
+- Probability of survival: $p_s(H)=1-p_c^d(H)-p_m^d(H)$
+
+- Expected frequency in successive generations: $m(H,t+1) \ge m(H,t) \cdot \frac{f(H,t)}{\bar f(t)} \cdot p_s(H)$
 
 Where:
 
@@ -111,3 +115,7 @@ Where:
 *   $l$: Chromosome length.
 *   $O(H)$: Order of schema $H$.
 *   $p_m$: Probability of mutation.
+*   $m(H,t)$ represents the number of chromosomes matching schema $H$ at generation $t$.
+*   $f(H,t)$ represents the mean fitness of chromosomes matching schema $H$ at generation $t$.
+*   $\bar f(t)$ represents the mean fitness of individuals in the population at generation $t$.
+
